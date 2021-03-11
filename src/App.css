@@ -24,3 +24,8 @@
 .inputConteiner:hover{
     background-color: rgb(114, 124, 114);
 }
+
+.inputCard{
+    width: 290px;
+    height: auto;
+}

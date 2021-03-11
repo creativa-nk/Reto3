@@ -1,11 +1,13 @@
 import React from 'react';
+import InputCard from './InputCard'
 
 
 export default function InputConteiner(){
     return(
-        <div className='inputConteiner'>
+        <div >
             <div>
-              + Añadir tarea 
+              <InputCard />
+              <span className='inputConteiner'>+ Añadir tarea </span>
             </div>
           
         </div>
