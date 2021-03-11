@@ -1,11 +1,26 @@
 .lista{
     background-color: cadetblue;
     height: auto;
-    width: 300px;
+    width: 300px; 
+}
+
+.tituloLista{
+    margin:5px;
 }
 
 .tarea{
     background-color: cornflowerblue;
     height: auto;
-    width: 270px;
+    width: 290px;
+    margin:5px ;
+}
+
+.inputConteiner{
+    background-color: darkgreen;
+    height: auto;
+    width: 290px;
+}
+
+.inputConteiner:hover{
+    background-color: rgb(114, 124, 114);
 }

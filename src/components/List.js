@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from './Card'
+import Card from './Card';
+import InputConteiner from './InputConteiner'
 
 
 export default function List(){
@@ -11,6 +12,7 @@ export default function List(){
             <Card/>
             <Card/>
             <Card/>
+            <InputConteiner />
         </div>
     )
 }
