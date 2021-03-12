@@ -3,12 +3,12 @@ import {Paper, Collapse} from '@material-ui/core';
 import InputCard from './InputCard'
 
 
-export default function InputConteiner(){
+export default function InputConteiner(listId){
   const [open,setOpen] = useState(false)
     return(
         <div >
             <Collapse in={open}>
-              <InputCard />
+              <InputCard setOpen={setOpen} listId={listId} />
             </Collapse>
             <Collapse in={!open}>
               
