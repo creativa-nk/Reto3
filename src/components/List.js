@@ -3,16 +3,16 @@ import Card from './Card';
 import InputConteiner from './InputConteiner'
 
 
-export default function List(){
+export default function List({list}){
     return(
         <div className='lista'>
-            <h1 className='tituloLista'> Titulo de lista </h1>
-            <Card />
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <InputConteiner />
+            <div>
+             <h1 className='tituloLista'> Titulo de lista </h1>
+             {list.cards.map((card)=>(
+                  <Card key={card.id} />
+              ))}
+             <InputConteiner />
+            </div>
         </div>
-    )
+    );
 }
