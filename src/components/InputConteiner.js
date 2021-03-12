@@ -1,15 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
+import {Paper, Collapse} from '@material-ui/core';
 import InputCard from './InputCard'
 
 
 export default function InputConteiner(){
+  const [open,setOpen] = useState(false)
     return(
         <div >
-            <div>
+            <Collapse in={open}>
               <InputCard />
-              <span className='inputConteiner'>+ Añadir tarea </span>
-            </div>
-          
+            </Collapse>
+            <Collapse in={!open}>
+              
+               <span onClick={()=>setOpen(!open)}> + Añadir tarea</span>
+              
+            </Collapse>
         </div>
     )
 }
