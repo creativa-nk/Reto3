@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export default function Card(){
+export default function Card({card}){
     return(
         <div className='tarea'>
-            Soy tarea
+            {card.content}
         </div>
     )
 }
