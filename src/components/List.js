@@ -9,7 +9,7 @@ export default function List({list}){
             <div>
              <h1 className='tituloLista'>{list.title} </h1>
              {list.cards.map((card)=>(
-                  <Card key={card.id} />
+                  <Card key={card.id} card={card} />
               )
               )}
              <InputConteiner />
