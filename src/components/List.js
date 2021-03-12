@@ -7,10 +7,11 @@ export default function List({list}){
     return(
         <div className='lista'>
             <div>
-             <h1 className='tituloLista'> Titulo de lista </h1>
+             <h1 className='tituloLista'>{list.title} </h1>
              {list.cards.map((card)=>(
                   <Card key={card.id} />
-              ))}
+              )
+              )}
              <InputConteiner />
             </div>
         </div>
