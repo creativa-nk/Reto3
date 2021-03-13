@@ -4,6 +4,7 @@ import store from './utils/store';
 import StoreApi from './utils/storeApi';
 import {v4 as uuid} from 'uuid';
 import './App.css';
+import InputConteiner from './components/InputConteiner';
 
 function App() {
   const [data,setData] = useState(store);
@@ -40,6 +41,7 @@ function App() {
            <List list={list} key={listId}/>
           )
         })}
+        <InputConteiner type='list' />
      </div>
     </StoreApi.Provider>
   );
