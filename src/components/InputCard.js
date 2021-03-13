@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import storeApi from '../utils/storeApi';
-import { Paper, InputBase, Button, IconButton } from '@material-ui/core';
+import { Paper, InputBase, Button } from '@material-ui/core';
 
 
 export default function InputCard({setOpen,listId,type}){
@@ -39,7 +39,7 @@ export default function InputCard({setOpen,listId,type}){
                  </Paper>
               </div>
               <div>
-                    <Button  onClick={handleBtnConfirm} >
+                    <Button onClick={handleBtnConfirm} >
                       {type === 'card' ? 'Añadir Tarea' : 'Añadir Lista'}
                     </Button>
                   <Button onClick={()=>setOpen(false)}>x</Button>
