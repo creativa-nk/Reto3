@@ -1,3 +1,9 @@
+.App{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .lista{
     background-color: cadetblue;
     height: auto;
