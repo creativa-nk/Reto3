@@ -1,3 +1,7 @@
+body{
+    background-color: coral;
+}
+
 .App{
     display: flex;
     flex-direction: row;
@@ -22,15 +26,15 @@
 }
 
 .inputConteiner{
-    background-color: darkgreen;
+    background-color:;
     height: auto;
     width: 290px;
 }
 
-.inputConteiner:hover{
+/* .inputConteiner:hover{
     background-color: rgb(114, 124, 114);
 }
-
+ */
 .inputCard{
     width: 290px;
     height: auto;
