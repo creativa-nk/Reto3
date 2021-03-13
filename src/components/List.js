@@ -12,7 +12,7 @@ export default function List({list}){
                   <Card key={card.id} card={card} />
               )
               )}
-             <InputConteiner listId={list.id} />
+             <InputConteiner listId={list.id} type='card' />
             </div>
         </div>
     );
