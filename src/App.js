@@ -5,6 +5,7 @@ import StoreApi from './utils/storeApi';
 import {v4 as uuid} from 'uuid';
 import './App.css';
 import InputContainer from './components/InputContainer';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 export default function App() {
   const [data,setData] = useState(store);
@@ -57,8 +58,19 @@ export default function App() {
     setData(newState);
   }
 
+  const onDragEnd = (result) => {
+    const{ destinacion, source, draggableId} = result;
+    console.log('destination', destinacion, 'source',source, draggableId);
+
+    if(!destinacion){ // si el destino es null( osea no es una lista >> devolver la tarea a su sitio)
+      return;
+    }
+  }; 
+
+
   return (
     <StoreApi.Provider value = {{addMoreCard, addMoreList}}>
+      <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
        {data.listIds.map((listId)=>{
          const list = data.lists[listId];
@@ -68,6 +80,7 @@ export default function App() {
         })}
         <InputContainer type='list' />
      </div>
+     </DragDropContext>
     </StoreApi.Provider>
   );
 }
