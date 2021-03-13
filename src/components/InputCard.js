@@ -23,14 +23,15 @@ export default function InputCard({setOpen,listId,type}){
 
 
     return(
-        <div>
+        <div  className='containetInputCard'>
              <div>
-                 <Paper>
-                <InputBase className='inputCard'
+                 <Paper className='inputCard'>
+                <InputBase 
                    multiline
+                   autoFocus
                    placeholder={
                        type === 'card'
-                       ?'Añade descripcion de la tarea'
+                       ?'Descripción de la tarea'
                        :'Añade nombre de lista'
                     }
                    value={title}
@@ -38,8 +39,8 @@ export default function InputCard({setOpen,listId,type}){
                  </Paper>
               </div>
               <div>
-                    <Button onClick={handleBtnConfirm} >
-                      {type === 'card' ? 'Add Card' : 'Add List'}
+                    <Button  onClick={handleBtnConfirm} >
+                      {type === 'card' ? 'Añadir Tarea' : 'Añadir Lista'}
                     </Button>
                   <Button onClick={()=>setOpen(false)}>x</Button>
               </div>
