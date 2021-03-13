@@ -23,7 +23,7 @@ export default function InputCard({setOpen,listId,type}){
 
 
     return(
-        <div>
+        <div  className='containetInputCard'>
              <div>
                  <Paper className='inputCard'>
                 <InputBase 

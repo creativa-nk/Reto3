@@ -1,68 +1,88 @@
 .encabezado{
+    margin-top: 45px;
     background-color: rgb(58, 103, 114);
+    border:1px solid rgb(45, 80, 88);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
+    text-align: center; 
+    height: 70px;
+    font-size: 1.3rem;
+} 
+.textoEncabezado{
+    margin-top: 8px;
     text-shadow: rgba(0, 0, 0, 0.315) 4px 2px 3px ;
-    height: 75px;
-    font-size: 1.5rem;
-}  
-
-
-body{
-    
-}
+} 
 
 .App{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .lista{
-    margin-top: 20px;
+    margin-top: 40px;
     background-color:rgb(91, 139, 151);
     width: 300px;
     height:auto;
-    padding: 7px 10px 8px;
+    padding: 7px 10px 17px;
+    border:1px solid rgb(69, 106, 116);
     border-radius: 5%;
     display:flex;
-    box-shadow:4px 2px 3px rgba(0, 0, 0, 0.315);
+    box-shadow:10px 4px 5px rgba(0, 0, 0, 0.315);
 }
 
 .tituloLista{
     margin:5px;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.315) 4px 2px 3px ;
 }
 
 .tarea{
-    background-color: cornflowerblue;
+    background-color: rgba(255, 255, 255, 0.459);
     height: auto;
-    width:280px;
-    padding: 5px;
+    width: 270px;
+    padding: 8px;
     margin:5px ;
+    border-radius: 7px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem ;
 }
 
-.inputConteiner{
-    background-color:;
+/* .inputConteiner{
+    background-color:red;
     height: auto;
     width: 200px;
 }
 
-/* .inputConteiner:hover{
+ .inputConteiner:hover{
     background-color: rgb(114, 124, 114);
+} */
+ 
+
+.containetInputCard{
+    background-color:rgba(138, 192, 194, 0.637);
+    border: 1px solid rgba(73, 99, 100, 0.513);
+    margin-top: 40px;
+    margin-left: 4px ;
+    width: 265px;
+    height:auto;
+    padding: 7px 10px 8px;
+    border-radius: 5px;
+    box-shadow:5px 4px 5px rgba(0, 0, 0, 0.315);
 }
- */
+
+
 .inputCard{
     margin-top:15px ;
     margin-left:5px ;
-    width: 290px;
+    width: auto;
     height: auto;
 }
 
 .btnAdd{
-    margin-top:15px ;
+    margin-top:40px ;
     margin-left:5px ;
-    width: 150px;
+    width: 285px;
     text-align: center;
     box-shadow:4px 2px 3px rgba(0, 0, 0, 0.315);
     cursor: pointer;
