@@ -12,7 +12,24 @@ function App() {
    console.log(title, listId);
    const newCardId = uuid();
    console.log(newCardId);
-  }
+
+   const newCard ={
+      id:newCardId,
+      title,
+   };
+
+   const list = data.lists[listId];
+   list.cards = [...list.cards, newCard];
+
+   const newState = {
+     ...data,
+    lists: {
+      ...data.lists,
+      [listId]: list,
+     },
+   };
+   setData(newState);
+  }; 
 
   return (
     <StoreApi.Provider value = {{addMoreCard}}>
