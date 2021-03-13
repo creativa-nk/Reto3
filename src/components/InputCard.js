@@ -15,7 +15,10 @@ export default function InputCard({setOpen,listId}){
        setOpen(false);
     };
 
-    
+    const handleBlur = () => {
+        setOpen(false);
+        setCardTitle('');   // dejar el input vacio
+    }
 
     return(
         <div>
@@ -25,7 +28,7 @@ export default function InputCard({setOpen,listId}){
                    multiline
                    placeholder='añade descripcion de la tarea'
                    value={cardTitle}
-                   onBlur={() => setOpen(false)}
+                   onBlur={handleBlur}
                    onChange={handleOnChange}/>
                  </Paper>
               </div>
