@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import InputConteiner from './InputConteiner'
+import InputConteiner from './InputContainer'
 
 
 export default function List({list}){
@@ -12,7 +12,7 @@ export default function List({list}){
                   <Card key={card.id} card={card} />
               )
               )}
-             <InputConteiner listId={list.id} />
+             <InputConteiner listId={list.id} type='card' />
             </div>
         </div>
     );
