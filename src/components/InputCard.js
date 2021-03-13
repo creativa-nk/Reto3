@@ -3,7 +3,7 @@ import storeApi from '../utils/storeApi';
 import { Paper, InputBase, Button, IconButton } from '@material-ui/core';
 
 
-export default function InputCard({setOpen,listId}){
+export default function InputCard({setOpen,listId,type}){
     const {addMoreCard} = useContext(storeApi);
     const [cardTitle,setCardTitle] = useState('')
     const handleOnChange = (e) =>{
@@ -26,14 +26,20 @@ export default function InputCard({setOpen,listId}){
                  <Paper>
                 <InputBase className='inputCard'
                    multiline
-                   placeholder='añade descripcion de la tarea'
+                   placeholder={
+                       type === 'card'
+                       ?'Añade descripcion de la tarea'
+                       :'Añade nombre de lista'
+                    }
                    value={cardTitle}
                    onBlur={handleBlur}
                    onChange={handleOnChange}/>
                  </Paper>
               </div>
               <div>
-                  <Button onClick={handleBtnConfirm} >Añadir Tarea</Button>
+                    <Button onClick={handleBtnConfirm} >
+                      {type === 'card' ? 'Add Card' : 'Add List'}
+                    </Button>
                   <Button onClick={()=>setOpen(false)}>x</Button>
               </div>
         </div>
