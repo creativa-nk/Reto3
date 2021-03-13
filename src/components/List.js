@@ -1,5 +1,5 @@
 import React from 'react';
-import { Droppable } from 'react-beautiful-dnd';
+import { Droppable, Draggable } from 'react-beautiful-dnd';
 import Card from './Card';
 import InputConteiner from './InputContainer'
 
@@ -12,10 +12,11 @@ export default function List({list}){
              <Droppable droppableId={list.id}>
                  {(provided)=>(
                      <div
-                     ref={provided.innerRef} {...provided.droppableProps}
+                     ref={provided.innerRef}
+                      {...provided.droppableProps}
                      >
-                         {list.cards.map((card)=>(
-                         <Card key={card.id} card={card} />
+                         {list.cards.map((card,index)=>(
+                         <Card key={card.id} card={card} index={index} />
                         ))}
                         {provided.placeholder}
                      </div>
