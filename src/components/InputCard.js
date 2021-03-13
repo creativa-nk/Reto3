@@ -5,19 +5,19 @@ import { Paper, InputBase, Button, IconButton } from '@material-ui/core';
 
 export default function InputCard({setOpen,listId,type}){
     const {addMoreCard} = useContext(storeApi);
-    const [cardTitle,setCardTitle] = useState('')
+    const [title,setTitle] = useState('')
     const handleOnChange = (e) =>{
-        setCardTitle(e.target.value);
+        setTitle(e.target.value);
     };
     const handleBtnConfirm = () =>{
-       addMoreCard(cardTitle, listId);
-       setCardTitle('')
+       addMoreCard(title, listId);
+       setTitle('')
        setOpen(false);
     };
 
     const handleBlur = () => {
         setOpen(false);
-        setCardTitle('');   // dejar el input vacio
+        setTitle('');   // dejar el input vacio
     }
 
     return(
@@ -31,7 +31,7 @@ export default function InputCard({setOpen,listId,type}){
                        ?'Añade descripcion de la tarea'
                        :'Añade nombre de lista'
                     }
-                   value={cardTitle}
+                   value={title}
                    onBlur={handleBlur}
                    onChange={handleOnChange}/>
                  </Paper>
