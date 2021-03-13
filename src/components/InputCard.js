@@ -34,7 +34,6 @@ export default function InputCard({setOpen,listId,type}){
                        :'Añade nombre de lista'
                     }
                    value={title}
-                   onBlur={()=>setOpen(false)}
                    onChange={handleOnChange}/>
                  </Paper>
               </div>
