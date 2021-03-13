@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import storeApi from '../utils/storeApi';
+import { Paper, InputBase, Button, IconButton } from '@material-ui/core';
 
 
 export default function InputCard({setOpen,listId}){
@@ -10,20 +11,27 @@ export default function InputCard({setOpen,listId}){
     };
     const handleBtnConfirm = () =>{
        addMoreCard(cardTitle, listId);
+       setCardTitle('')
        setOpen(false);
     };
+
+    
 
     return(
         <div>
              <div>
-                <input className='inputCard'
-                 placeholder='añade descripcion de la tarea'
-                  value={cardTitle}
+                 <Paper>
+                <InputBase className='inputCard'
+                   multiline
+                   placeholder='añade descripcion de la tarea'
+                   value={cardTitle}
+                   onBlur={() => setOpen(false)}
                    onChange={handleOnChange}/>
+                 </Paper>
               </div>
               <div>
-                  <button onClick={handleBtnConfirm} >Añadir Tarea</button>
-                  <button onClick={()=>setOpen(false)}>X</button>
+                  <Button onClick={handleBtnConfirm} >Añadir Tarea</Button>
+                  <Button onClick={()=>setOpen(false)}>x</Button>
               </div>
         </div>
     )
