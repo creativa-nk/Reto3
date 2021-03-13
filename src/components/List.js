@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import InputConteiner from './InputConteiner'
+import InputConteiner from './InputContainer'
 
 
 export default function List({list}){
