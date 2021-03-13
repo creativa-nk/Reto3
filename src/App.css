@@ -1,5 +1,16 @@
+.encabezado{
+    background-color: rgb(58, 103, 114);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.315) 4px 2px 3px ;
+    height: 75px;
+    font-size: 1.5rem;
+}  
+
+
 body{
-    background-color: coral;
+    
 }
 
 .App{
@@ -9,9 +20,14 @@ body{
 }
 
 .lista{
-    background-color: cadetblue;
-    height: auto;
-    width: 300px; 
+    margin-top: 20px;
+    background-color:rgb(91, 139, 151);
+    width: 300px;
+    height:auto;
+    padding: 7px 10px 8px;
+    border-radius: 5%;
+    display:flex;
+    box-shadow:4px 2px 3px rgba(0, 0, 0, 0.315);
 }
 
 .tituloLista{
@@ -21,14 +37,15 @@ body{
 .tarea{
     background-color: cornflowerblue;
     height: auto;
-    width: 290px;
+    width:280px;
+    padding: 5px;
     margin:5px ;
 }
 
 .inputConteiner{
     background-color:;
     height: auto;
-    width: 290px;
+    width: 200px;
 }
 
 /* .inputConteiner:hover{
@@ -36,6 +53,17 @@ body{
 }
  */
 .inputCard{
+    margin-top:15px ;
+    margin-left:5px ;
     width: 290px;
     height: auto;
+}
+
+.btnAdd{
+    margin-top:15px ;
+    margin-left:5px ;
+    width: 150px;
+    text-align: center;
+    box-shadow:4px 2px 3px rgba(0, 0, 0, 0.315);
+    cursor: pointer;
 }

@@ -10,12 +10,12 @@ export default function InputContainer({ listId, type }) {
       <Collapse in={open}>
         <InputCard setOpen={setOpen} listId={listId} type={type} />
       </Collapse>
-      <Collapse in={!open}>
+      <Collapse in={!open} className='btnAdd'>
         <Paper
            onClick={() => setOpen(!open)} 
         >
-          <Typography>
-            {type === 'card' ? '+ Add a Card' : '+ Add another List'}
+          <Typography >
+            {type === 'card' ? '+ Añadir Tarea' : '+ Añadir Lista'}
           </Typography>
         </Paper>
       </Collapse>
