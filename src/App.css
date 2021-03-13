@@ -42,7 +42,7 @@
     height: auto;
     width: 270px;
     padding: 8px;
-    margin:5px ;
+    margin:10px 5px;
     border-radius: 7px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem ;
@@ -60,11 +60,11 @@
  
 
 .containetInputCard{
-    background-color:rgba(138, 192, 194, 0.637);
+    background-color:rgba(138, 192, 194, 0.568);
     border: 1px solid rgba(73, 99, 100, 0.513);
     margin-top: 40px;
     margin-left: 4px ;
-    width: 265px;
+    width: 270px;
     height:auto;
     padding: 7px 10px 8px;
     border-radius: 5px;
