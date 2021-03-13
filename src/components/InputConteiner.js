@@ -3,7 +3,7 @@ import { Paper, Typography, Collapse } from '@material-ui/core';
 import InputCard from './InputCard'
 
 
-export default function InputConteiner(listId,type){
+export default function InputConteiner(listId, type){
   const [open,setOpen] = useState(false)
     return(
         <div className='inputConteiner'>
@@ -11,10 +11,12 @@ export default function InputConteiner(listId,type){
               <InputCard setOpen={setOpen} listId={listId} type={type} />   {/* que type es lista o card */}
             </Collapse>
             <Collapse in={!open}>
-              <Paper>
-
-                  <span onClick={()=>setOpen(!open)}> + Añadir tarea</span>
-                
+              <Paper
+               onClick={() => setOpen(!open)}
+              >
+                <Typography>
+                  {type === 'card'?'+ Añadir otra Tarea':'+ Añadir otra Lista'}
+                </Typography>
               </Paper>
             </Collapse>
         </div>
