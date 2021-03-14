@@ -5,7 +5,7 @@ import StoreApi from './utils/storeApi';
 import {v4 as uuid} from 'uuid';
 import './App.css';
 import InputContainer from './components/InputContainer';
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export default function App() {
   const [data,setData] = useState(store);
@@ -118,16 +118,25 @@ export default function App() {
   return (
     <StoreApi.Provider value = {{addMoreCard, addMoreList}}>
       <DragDropContext onDragEnd={onDragEnd}>
-      <div className="App">
-       {data.listIds.map((listId)=>{
-         const list = data.lists[listId];
-          return(
-           <List list={list} key={listId}/>
-          )
-        })}
-        <InputContainer type='list' />
-     </div>
-     </DragDropContext>
+        <Droppable droppableId="app" type="list"  direction="horizontal">
+            {(provided) => (
+              <div
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+               >
+                  <div className="App">
+                   {data.listIds.map((listId,index)=>{
+                     const list = data.lists[listId];
+                       return(
+                        <List list={list} key={listId} index={index}/>
+                        )
+                     })}
+                    <InputContainer type='list' />
+                  </div>
+              </div>
+           )}
+         </Droppable>
+       </DragDropContext>
     </StoreApi.Provider>
   );
 }
