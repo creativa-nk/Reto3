@@ -4,26 +4,31 @@ import Card from './Card';
 import InputConteiner from './InputContainer'
 
 
-export default function List({list}){
+export default function List({list,index}){
     return(
-        <div className='lista'>
-            <div>
-             <h1 className='tituloLista'>{list.title} </h1>
-             <Droppable droppableId={list.id}>
-                 {(provided)=>(
-                     <div
-                     ref={provided.innerRef}
-                      {...provided.droppableProps}
-                     >
-                         {list.cards.map((card,index)=>(
-                         <Card key={card.id} card={card} index={index} />
-                        ))}
-                        {provided.placeholder}
-                     </div>
-                 )}    
-              </Droppable>
-             <InputConteiner listId={list.id} type='card' />
-            </div>
-        </div>
+        <Draggable draggableId={list.id} index={index}>
+            {(provided) => (
+                <div className='lista'{...provided.draggableProps} ref={provided.innerRef}>
+                    <div  {...provided.dragHandleProps}>
+                        <h1 className='tituloLista'>{list.title} </h1>
+                             <Droppable droppableId={list.id}>
+                                  {(provided)=>(
+                                <div
+                                  ref={provided.innerRef}
+                                  {...provided.droppableProps}
+                                >
+                                 {list.cards.map((card,index)=>(
+                                 <Card key={card.id} card={card} index={index} />
+                                 ))}
+                                 {provided.placeholder}
+                                </div>
+                                  )}    
+                             </Droppable>
+                         <InputConteiner listId={list.id} type='card' />
+                    </div>
+                </div>
+            )}
+        
+        </Draggable> 
     );
 }
