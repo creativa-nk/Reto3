@@ -9,6 +9,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export default function App() {
   const [data,setData] = useState(store);
+  const [open, setOpen] = useState(false);
 
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
@@ -42,10 +43,10 @@ export default function App() {
     };
 
 
-    const updateListTitle = (title, listId) => {
+   /*  const updateListTitle = (title, listId) => {
       const list = data.lists[listId];
       list.title = title;
-    }
+    } */
 
 
     const newState = {
@@ -66,18 +67,24 @@ export default function App() {
     if(!destination){ // si el destino es null( osea no es una lista >> devolver la tarea a su sitio)
       return;
     }
+ 
+    /*  if(tipe === list){
+      const newListId = data.listIds;
+      const newListIds = data.listIds;
+      newListIds.splice(source.index, 1);
+      newListIds.splice(destination.index, 0, draggableId);
+      return;
+    }  */
     
     /* if (destination.droppableId === source.droppableId && destination.index === source.index)
       return
       const newListId =  */
     
-    
-    if  (/* type ===  'list' */ destination.droppableId === source.droppableId && destination.index === source.index){
+     
+      if  (/* type ===  'list'*/  destination.droppableId === source.droppableId && destination.index === source.index){
      return
-      const newListIds = data.listIds;
-      newListIds.splice(source.index, 1);
-      newListIds.splice(destination.index, 0, draggableId);
-  }
+      
+  } 
        
 
 
@@ -118,7 +125,7 @@ export default function App() {
   return (
     <StoreApi.Provider value = {{addMoreCard, addMoreList}}>
       <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId="app" type="list"  direction="horizontal">
+        <Droppable droppableId="app" type="list"  direction="horizontal" >
             {(provided) => (
               <div
                 ref={provided.innerRef}
