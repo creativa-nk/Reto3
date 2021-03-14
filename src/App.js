@@ -61,17 +61,26 @@ export default function App() {
   const onDragEnd = (result) => {
     const{ destination, source, draggableId} = result;
     console.log('destination', destination, 'source',source, draggableId);
+    console.log(result)
 
     if(!destination){ // si el destino es null( osea no es una lista >> devolver la tarea a su sitio)
       return;
     }
     
-    if (type === 'list') {
+    /* if (destination.droppableId === source.droppableId && destination.index === source.index)
+      return
+      const newListId =  */
+    
+    
+    if  (/* type ===  'list' */ destination.droppableId === source.droppableId && destination.index === source.index){
+     return
       const newListIds = data.listIds;
       newListIds.splice(source.index, 1);
       newListIds.splice(destination.index, 0, draggableId);
-      return;
-    }
+  }
+       
+
+
 
     const sourceList = data.lists[source.droppableId];
     const destinationList = data.lists[destination.droppableId];
