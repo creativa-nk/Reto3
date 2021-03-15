@@ -11,7 +11,9 @@ export default function Card({card,index}){
                      {...provided.dragHandleProps}
                      {...provided.draggableProps}
                 >
-                     <div className='tarea'>{card.title}</div>
+                     <div className='tarea'>{card.title}
+                        <div className='Xbtn'>X</div>
+                     </div>
                 </div> 
             )}
         </Draggable>

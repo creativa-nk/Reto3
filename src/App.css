@@ -46,7 +46,27 @@
     border-radius: 7px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem ;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    
 }
+
+.Xbtn{
+    background-color: rgba(255, 255, 255, 0.246);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 2px;
+    padding: 2px;
+    text-align: center; 
+}
+
+.Xbtn:hover{
+    background-color: rgba(20, 20, 20, 0.103);
+    color:white;
+}
+
 
 /* .inputConteiner{
     background-color:red;
