@@ -24,7 +24,11 @@ export default function List({list,index}){
                                 </div>
                                   )}    
                              </Droppable>
-                         <InputConteiner listId={list.id} type='card' />
+                             <div>
+                                <InputConteiner listId={list.id} type='card' />
+                                 <div className='XbtnLista'>Borrar Lista</div>
+                             </div>
+                         
                     </div>
                 </div>
             )}
