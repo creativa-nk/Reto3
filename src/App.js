@@ -11,6 +11,15 @@ export default function App() {
   const [data,setData] = useState(store);
   const [open, setOpen] = useState(false);
 
+
+  /* const [lists, updateCards] = useState(store);
+
+  const deleteCard = (id) => {
+    updateCards(cards => cards.filter(card => card.id !== id));
+    setData({cards:updateCards}) 
+  }; */
+
+
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
 
@@ -59,35 +68,19 @@ export default function App() {
     setData(newState);
   }
 
-  const onDragEnd = (result) => {
-    const{ destination, source, draggableId} = result;
-    console.log('destination', destination, 'source',source, draggableId);
-    console.log(result)
+ const onDragEnd = (result) => {
+    const { destination, source, draggableId, type } = result;
+    console.log('destination', destination, 'source', source, draggableId);
 
-    if(!destination){ // si el destino es null( osea no es una lista >> devolver la tarea a su sitio)
+    if (!destination) {
       return;
     }
- 
-    /*  if(tipe === list){
-      const newListId = data.listIds;
+    if (type === 'list') {
       const newListIds = data.listIds;
       newListIds.splice(source.index, 1);
       newListIds.splice(destination.index, 0, draggableId);
       return;
-    }  */
-    
-    /* if (destination.droppableId === source.droppableId && destination.index === source.index)
-      return
-      const newListId =  */
-    
-     
-      if  (/* type ===  'list'*/  destination.droppableId === source.droppableId && destination.index === source.index){
-     return
-      
-  } 
-       
-
-
+    }
 
     const sourceList = data.lists[source.droppableId];
     const destinationList = data.lists[destination.droppableId];
