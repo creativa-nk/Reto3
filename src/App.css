@@ -1,3 +1,8 @@
+body{
+    background-image:url("./img/FondoTrello.png") ;
+    background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+}
+
 .encabezado{
     margin-top: 45px;
     background-color: rgb(58, 103, 114);
