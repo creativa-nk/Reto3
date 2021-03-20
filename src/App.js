@@ -9,16 +9,85 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export default function App() {
   const [data,setData] = useState(store);
-  const [open, setOpen] = useState(false);
 
+  
+  
+/*   const [lists, updateCards] = useState(store);
 
-  /* const [lists, updateCards] = useState(store);
-
-  const deleteCard = (id) => {
-    updateCards(cards => cards.filter(card => card.id !== id));
+  const deleteCard = id => {
+    updateCards(cards => list.cards.filter(card => card.id !== id));
     setData({cards:updateCards}) 
+  };  */
+
+
+
+ /*  const deleteCard = (title,listId) => {
+
+   let { cards } = this.state; 
+ 
+    let newCards = [
+      ...card.slice(0, id),
+      ...card.slice(id + 1),
+    ]
+ 
+    this.setState({ cards : newCards });
+ 
+  }  */
+
+
+
+/*   const deleteCard = (indexItem) =>{
+    setlista((prevState) =>
+    prevState.filter((listId,index) => index !== indexItem)
+    );
   }; */
 
+
+
+/*   const deleteCard = (listI,index) =>{
+    // var actualData = data;
+    data.lists["list-1"].cards.splice(0,1)
+    console.log(data.lists["list-1"].cards);
+    console.log(data.listId)
+    console.log(data.cardsId)
+    
+  } */
+
+
+/*   const deleteCard = (position) => {
+    const newData = [
+      ...data.slice(0,position),
+      ...data.slice(position + 1),
+    ]
+    setData(newData)
+    console.log(newData)
+  }
+ */
+
+
+  /* 
+      const DeleteCard = (title, cardId) => {
+        const filtredData = setData.cards.filter(card => card.id !== cardId);
+        setData({cards:filtredData})
+        console.log(cardId)
+        console.log(filtredData)
+      };
+ */
+
+
+  
+/*    const deleteList = (listId) => {
+     const newState = data.filter(list => list.lists.id !==listId);
+     setData(newState);
+   }; */
+
+   const deleteList = (listId) => {
+    console.log(listId)
+    const listToDelete = data.lists[listId]
+    const newState = useState.filter(list => list.id !== listId)
+    setData(newState)
+
+  };
 
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
@@ -128,7 +197,7 @@ export default function App() {
                    {data.listIds.map((listId,index)=>{
                      const list = data.lists[listId];
                        return(
-                        <List list={list} key={listId} index={index}/>
+                        <List list={list} key={listId} index={index} deleteList={deleteList} listId={listId}/>
                         )
                      })}
                     <InputContainer type='list' />

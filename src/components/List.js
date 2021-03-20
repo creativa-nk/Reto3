@@ -4,7 +4,7 @@ import Card from './Card';
 import InputConteiner from './InputContainer'
 
 
-export default function List({list,index}){
+export default function List({list,index/* ,listId, deleteList */}){
     return(
         <Draggable draggableId={list.id} index={index}>
             {(provided) => (
@@ -26,7 +26,7 @@ export default function List({list,index}){
                              </Droppable>
                              <div>
                                 <InputConteiner listId={list.id} type='card' />
-                                 <div className='XbtnLista'>Borrar Lista</div>
+                                 <div className='XbtnLista'/*  onClick = {() => deleteList(listId)} */>Borrar Lista</div>
                              </div>
                          
                     </div>
