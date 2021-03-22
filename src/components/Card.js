@@ -4,7 +4,7 @@ import store from '../utils/store'
 
 
 
-export default function Card({card,index/* , id, deleteCard */}){
+export default function Card({card,index , id, deleteCard}){
   const [data,setData] = useState(store);
   
     return(
@@ -16,7 +16,7 @@ export default function Card({card,index/* , id, deleteCard */}){
                      {...provided.draggableProps}
                 >
                      <div className='tarea'>{card.title}
-                        <div className='Xbtn'/*    onClick={() =>deleteCard(id)} */ >X</div>
+                        <div className='Xbtn'    onClick={() =>deleteCard(id, index)}  >X</div>
                      </div>
                 </div> 
             )}

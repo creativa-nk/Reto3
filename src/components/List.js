@@ -1,10 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import Card from './Card';
+import store from '../utils/store';
 import InputConteiner from './InputContainer'
 
 
 export default function List({list,index ,listId, deleteList}){
+    const [data,setData] = useState(store);
+
+    const deleteCard = (id,index) =>{
+        // var actualData = data;
+         const newData = data.lists[listId].cards.splice(index, 1)
+                        
+        console.log(index);
+        console.log(data.listIds)
+        console.log(data.lists[listId].cards)
+        console.log(newData)
+        setData(data.lists[listId].cards)
+
+        /* const newData = [ 
+            ...data.lists[listId].cards.splice(0,cardId),
+            ...data.lists[listId].cards.splice(cardId +1), */
+        
+      } 
     return(
         <Draggable draggableId={list.id} index={index}>
             {(provided) => (
@@ -18,7 +36,7 @@ export default function List({list,index ,listId, deleteList}){
                                   {...provided.droppableProps}
                                 >
                                  {list.cards.map((card,index)=>(
-                                 <Card key={card.id} card={card} index={index} /* id={id} deleteCard={deleteCard} */ />
+                                 <Card key={card.id} card={card} index={index} deleteCard={deleteCard} />
                                  ))}
                                  {provided.placeholder}
                                 </div>

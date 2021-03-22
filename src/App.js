@@ -28,14 +28,7 @@ export default function App() {
 
 
 
-/*   const deleteCard = (listI,index) =>{
-    // var actualData = data;
-    data.lists["list-1"].cards.splice(0,1)
-    console.log(data.lists["list-1"].cards);
-    console.log(data.listId)
-    console.log(data.cardsId)
-    
-  } */
+  
 
 
    
@@ -58,7 +51,7 @@ export default function App() {
     /*const listToDelete = data.lists[listId]*/
     /*const newState = data.lists.filter(x => x.id !== id);
     /* setData(newState)
-    
+
     /* const arrayFiltrado = data.lists.filter(x => x.id !== id) */
     /* setData(arrayFiltrado) */
     /* console.log(arrayFiltrado) */
