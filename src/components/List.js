@@ -4,7 +4,7 @@ import Card from './Card';
 import InputConteiner from './InputContainer'
 
 
-export default function List({list,index/* ,listId, deleteList */}){
+export default function List({list,index ,listId, deleteList}){
     return(
         <Draggable draggableId={list.id} index={index}>
             {(provided) => (
@@ -18,7 +18,7 @@ export default function List({list,index/* ,listId, deleteList */}){
                                   {...provided.droppableProps}
                                 >
                                  {list.cards.map((card,index)=>(
-                                 <Card key={card.id} card={card} index={index} />
+                                 <Card key={card.id} card={card} index={index} /* id={id} deleteCard={deleteCard} */ />
                                  ))}
                                  {provided.placeholder}
                                 </div>
@@ -26,7 +26,7 @@ export default function List({list,index/* ,listId, deleteList */}){
                              </Droppable>
                              <div>
                                 <InputConteiner listId={list.id} type='card' />
-                                 <div className='XbtnLista'/*  onClick = {() => deleteList(listId)} */>Borrar Lista</div>
+                                 <div className='XbtnLista'  onClick = {() => deleteList(listId)}>Borrar Lista</div>
                              </div>
                          
                     </div>

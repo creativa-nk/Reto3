@@ -20,22 +20,6 @@ export default function App() {
   };  */
 
 
-
- /*  const deleteCard = (title,listId) => {
-
-   let { cards } = this.state; 
- 
-    let newCards = [
-      ...card.slice(0, id),
-      ...card.slice(id + 1),
-    ]
- 
-    this.setState({ cards : newCards });
- 
-  }  */
-
-
-
 /*   const deleteCard = (indexItem) =>{
     setlista((prevState) =>
     prevState.filter((listId,index) => index !== indexItem)
@@ -54,25 +38,14 @@ export default function App() {
   } */
 
 
-/*   const deleteCard = (position) => {
-    const newData = [
-      ...data.slice(0,position),
-      ...data.slice(position + 1),
-    ]
-    setData(newData)
-    console.log(newData)
-  }
- */
-
-
-  /* 
-      const DeleteCard = (title, cardId) => {
-        const filtredData = setData.cards.filter(card => card.id !== cardId);
-        setData({cards:filtredData})
-        console.log(cardId)
-        console.log(filtredData)
-      };
- */
+   
+ /* const deleteCard = () => {
+    const filtredData = data.cards.filter(x => x.id !== id);
+         
+    console.log(cards.id)
+    console.log(filtredData) 
+  }; */
+  
 
 
   
@@ -81,13 +54,18 @@ export default function App() {
      setData(newState);
    }; */
 
-   const deleteList = (listId) => {
-    console.log(listId)
-    const listToDelete = data.lists[listId]
-    const newState = useState.filter(list => list.id !== listId)
-    setData(newState)
+    const deleteList = (listId) => {
+    /*const listToDelete = data.lists[listId]*/
+    /*const newState = data.lists.filter(x => x.id !== id);
+    /* setData(newState)
+    
+    /* const arrayFiltrado = data.lists.filter(x => x.id !== id) */
+    /* setData(arrayFiltrado) */
+    /* console.log(arrayFiltrado) */
+    console.log(data.lists)
+    console.log(data.lists[listId])
+  }; 
 
-  };
 
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
