@@ -5,24 +5,29 @@ import store from '../utils/store';
 import InputConteiner from './InputContainer'
 
 
-export default function List({list,index ,listId, deleteList}){
+export default function List({list,index ,listId}){
     const [data,setData] = useState(store);
 
     const deleteCard = (id,index) =>{
-        // var actualData = data;
-         const newData = data.lists[listId].cards.splice(index, 1)
+    
+        const newData = data.lists[listId].cards.splice(index, 1)
                         
+        console.log(listId)
         console.log(index);
-        console.log(data.listIds)
-        console.log(data.lists[listId].cards)
+        console.log(data.lists[listId].cards) 
         console.log(newData)
-        setData(data.lists[listId].cards)
+        /* setData(data.lists[listId].cards) */ // da el error
+    } 
 
-        /* const newData = [ 
-            ...data.lists[listId].cards.splice(0,cardId),
-            ...data.lists[listId].cards.splice(cardId +1), */
-        
-      } 
+    const deleteList = (index) =>{
+    
+        const newData = data.lists[listId].cards.splice(index)
+
+        console.log(listId)
+        console.log(data.lists[listId].cards)
+        /* setData(data.lists[listId].cards) */ // da el error
+
+    }
     return(
         <Draggable draggableId={list.id} index={index}>
             {(provided) => (
@@ -44,7 +49,7 @@ export default function List({list,index ,listId, deleteList}){
                              </Droppable>
                              <div>
                                 <InputConteiner listId={list.id} type='card' />
-                                 <div className='XbtnLista'  onClick = {() => deleteList(listId)}>Borrar Lista</div>
+                                 <div className='XbtnLista'  onClick = {() => deleteList(listId)}>Limpiar Lista</div>
                              </div>
                          
                     </div>
