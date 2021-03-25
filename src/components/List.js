@@ -10,13 +10,26 @@ export default function List({list,index ,listId}){
 
     const deleteCard = (id,index) =>{
     
-        const newData = data.lists[listId].cards.splice(index, 1)
+        const newListCards = data.lists[listId].cards.splice(index, 1)
                         
         console.log(listId)
         console.log(index);
         console.log(data.lists[listId].cards) 
-        console.log(newData)
+        console.log(newListCards)
         /* setData(data.lists[listId].cards) */ // da el error
+        /* const list = data.lists[listId];
+        list.cards = [...list.cards]; */
+        const list = data.lists[listId];
+        const cards = data.lists[listId].cards
+
+        const newState ={
+            ...data,
+            lists:{
+                ...data.lists,
+                [listId]: list,
+            },
+        };
+        setData(newState)
     } 
 
     const deleteList = (index) =>{
@@ -26,6 +39,14 @@ export default function List({list,index ,listId}){
         console.log(listId)
         console.log(data.lists[listId].cards)
         /* setData(data.lists[listId].cards) */ // da el error
+        const newState ={
+            ...data,
+            lists:{
+                ...data.lists,
+                [listId]: list,
+            },
+        };
+        setData(newState)
 
     }
     return(
