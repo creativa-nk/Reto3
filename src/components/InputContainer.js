@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Paper, Typography, Collapse } from '@material-ui/core';
+import {Collapse } from '@material-ui/core';
 import InputCard from './InputCard'
 
 

@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
-import { Draggable, Droppable } from 'react-beautiful-dnd';
-import store from '../utils/store'
+import React from 'react';
+import { Draggable} from 'react-beautiful-dnd'
 
 
 
 export default function Card({card,index , id, deleteCard}){
-  const [data,setData] = useState(store);
   
     return(
         <Draggable draggableId={card.id} index={index}>

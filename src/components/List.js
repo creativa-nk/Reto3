@@ -17,8 +17,6 @@ export default function List({list,index ,listId}){
         console.log(data.lists[listId].cards) 
         console.log(newListCards)
         /* setData(data.lists[listId].cards) */ // da el error
-        /* const list = data.lists[listId];
-        list.cards = [...list.cards]; */
         const list = data.lists[listId];
         const cards = data.lists[listId].cards
 
@@ -34,7 +32,7 @@ export default function List({list,index ,listId}){
 
     const deleteList = (index) =>{
     
-        const newData = data.lists[listId].cards.splice(index)
+         data.lists[listId].cards.splice(index)
 
         console.log(listId)
         console.log(data.lists[listId].cards)

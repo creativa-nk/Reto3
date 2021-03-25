@@ -10,56 +10,6 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 export default function App() {
   const [data,setData] = useState(store);
 
-  
-  
-/*   const [lists, updateCards] = useState(store);
-
-  const deleteCard = id => {
-    updateCards(cards => list.cards.filter(card => card.id !== id));
-    setData({cards:updateCards}) 
-  };  */
-
-
-/*   const deleteCard = (indexItem) =>{
-    setlista((prevState) =>
-    prevState.filter((listId,index) => index !== indexItem)
-    );
-  }; */
-
-
-
-  
-
-
-   
- /* const deleteCard = () => {
-    const filtredData = data.cards.filter(x => x.id !== id);
-         
-    console.log(cards.id)
-    console.log(filtredData) 
-  }; */
-  
-
-
-  
-/*    const deleteList = (listId) => {
-     const newState = data.filter(list => list.lists.id !==listId);
-     setData(newState);
-   }; */
-
-    const deleteList = (listId) => {
-    /*const listToDelete = data.lists[listId]*/
-    /*const newState = data.lists.filter(x => x.id !== id);
-    /* setData(newState)
-
-    /* const arrayFiltrado = data.lists.filter(x => x.id !== id) */
-    /* setData(arrayFiltrado) */
-    /* console.log(arrayFiltrado) */
-    console.log(data.lists)
-    console.log(data.lists[listId])
-  }; 
-
-
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
 
@@ -168,7 +118,7 @@ export default function App() {
                    {data.listIds.map((listId,index)=>{
                      const list = data.lists[listId];
                        return(
-                        <List list={list} key={listId} index={index} deleteList={deleteList} listId={listId}/>
+                        <List list={list} key={listId} index={index} listId={listId}/>
                         )
                      })}
                     <InputContainer type='list' />
