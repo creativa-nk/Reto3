@@ -29,7 +29,7 @@ With this aplication yo can do:
 - organizing tasks between them and between other lists
 
 <img src='public/img/readme/inicio.png' width='100%'> 
-<img src='public/img/readme/crearTaresYlista.png' width='500%'> 
+<img src='public/img/readme/crearTareaYlista.png' width='50%'> 
 
 
 
