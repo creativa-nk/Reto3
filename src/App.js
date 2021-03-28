@@ -49,9 +49,9 @@ export default function App() {
 
 
     const newState = {
-      listIds: [... data.listIds, newListId],
+      listIds: [...data.listIds, newListId],
       lists: {
-        ... data.lists,
+        ...data.lists,
         [newListId]: newList
       },
     };
