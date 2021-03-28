@@ -23,10 +23,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## App information
 
 With this aplication yo can do:
-- create lists\
-- create tasks inside the list\
-- delete tasks and clear list\
-- organizing tasks between them and between other lists\
+- create lists
+- create tasks inside the list
+- delete tasks and clear list
+- organizing tasks between them and between other lists
+
+![_].()
 
 
 
