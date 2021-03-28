@@ -28,7 +28,8 @@ With this aplication yo can do:
 - delete tasks and clear list
 - organizing tasks between them and between other lists
 
-![./img/readme/inicio.png].(inicio)
+<img src='./img/readme/inicio.png' width='100'>
+
 
 
 
