@@ -28,7 +28,7 @@ With this aplication yo can do:
 - delete tasks and clear list
 - organizing tasks between them and between other lists
 
-![_].(img/readme/inicio.png)
+![_](img/readme/inicio.png)
 
 
 
