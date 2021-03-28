@@ -1,4 +1,4 @@
-# Trello Reto3 Geek
+# Trello Geek
 
 This project is a simplified version of Trello created with educational purposes using React, Javascript and CSS.
 
@@ -28,7 +28,8 @@ With this aplication yo can do:
 - delete tasks and clear list
 - organizing tasks between them and between other lists
 
-<img src='public/img/readme/inicio.png' width='100%'> 
+<img src='public/img/readme/inicio.png' width='100%'>
+<img src='public/img/readme/añadir.png' width='100%'> 
 <img src='public/img/readme/DnD.png' width='100%'> 
 
 ## Future Improvements
