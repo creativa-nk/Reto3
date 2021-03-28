@@ -31,6 +31,10 @@ With this aplication yo can do:
 <img src='public/img/readme/inicio.png' width='100%'> 
 <img src='public/img/readme/DnD.png' width='100%'> 
 
+## Future Improvements
+- delete list
+- edit title
+
 
 
 
