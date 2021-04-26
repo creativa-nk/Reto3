@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reto3/static/css/main.504f7c58.chunk.css",
+    "main.js": "/reto3/static/js/main.b6daa8b2.chunk.js",
+    "main.js.map": "/reto3/static/js/main.b6daa8b2.chunk.js.map",
+    "runtime-main.js": "/reto3/static/js/runtime-main.9d43e617.js",
+    "runtime-main.js.map": "/reto3/static/js/runtime-main.9d43e617.js.map",
+    "static/js/2.43c2da9a.chunk.js": "/reto3/static/js/2.43c2da9a.chunk.js",
+    "static/js/2.43c2da9a.chunk.js.map": "/reto3/static/js/2.43c2da9a.chunk.js.map",
+    "static/js/3.1407b129.chunk.js": "/reto3/static/js/3.1407b129.chunk.js",
+    "static/js/3.1407b129.chunk.js.map": "/reto3/static/js/3.1407b129.chunk.js.map",
+    "index.html": "/reto3/index.html",
+    "static/css/main.504f7c58.chunk.css.map": "/reto3/static/css/main.504f7c58.chunk.css.map",
+    "static/js/2.43c2da9a.chunk.js.LICENSE.txt": "/reto3/static/js/2.43c2da9a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/reto3/static/media/FondoTrello.8203ee54.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d43e617.js",
+    "static/js/2.43c2da9a.chunk.js",
+    "static/css/main.504f7c58.chunk.css",
+    "static/js/main.b6daa8b2.chunk.js"
+  ]
+}
